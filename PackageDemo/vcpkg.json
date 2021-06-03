@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "package-demo",
+  "version": "0.1",
+  "builtin-baseline": "7bc5b8cdfaf35329c1520b2af8d368e2b1cb78e6",
+  "dependencies": [
+    "fmt",
+    "xtensor"
+
+  ],
+  "overrides": [
+    {
+      "name": "fmt",
+      "version": "7.1.0"
+    }
+  ]
+}

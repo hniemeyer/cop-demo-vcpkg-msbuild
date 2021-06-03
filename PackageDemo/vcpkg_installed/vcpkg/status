@@ -1,0 +1,217 @@
+Package: boost-uninstall
+Version: 1.75.0
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e8a9085daf8571a18c0e99aa7a31df12062857b1
+Description: boost uninstall port
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-vcpkg-helpers
+Version: 7
+Port-Version: 2
+Depends: boost-uninstall
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8dab62a813ef67fa466284606968da1b81402993
+Description: a set of vcpkg-internal scripts used to modularize boost
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-predef
+Version: 1.75.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 07ca17a6abda0fb2edd2d17792250877b6964f1c
+Description: Boost predef module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-compatibility
+Version: 1.75.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8306982d5f18b54600a918bba2fece6b6ddaa409
+Description: Boost compatibility module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-config
+Version: 1.75.0
+Depends: boost-compatibility, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 902f523a93ec1ba2081f1d247746e8038c0c7af5
+Description: Boost config module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-winapi
+Version: 1.75.0
+Depends: boost-config, boost-predef, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a6e3d934f86253249b091f8e3c76204d78e8274f
+Description: Boost winapi module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-build
+Version: 1.75.0
+Depends: boost-uninstall
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0a5e29ac4528fe1b58726c5eb6d3ec96d9d522d9
+Description: Boost.Build
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-modular-build-helper
+Version: 1.75.0
+Port-Version: 9
+Depends: boost-build, boost-uninstall
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ed9b209ea0c8a910b9382e6604cb6000ea9c353b
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-assert
+Version: 1.75.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3ed11bf33041a8e386a4eb3c2c5b149168f97e08
+Description: Boost assert module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-throw-exception
+Version: 1.75.0
+Depends: boost-assert, boost-config, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c282005ecda4c2b8fcd704fa5e997f7638f789e1
+Description: Boost throw_exception module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-preprocessor
+Version: 1.75.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 63877e886f725c18924837362c0d0b8082082625
+Description: Boost preprocessor module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-detail
+Version: 1.75.0
+Depends: boost-compatibility, boost-config, boost-preprocessor, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 46aadf8a7bc67bf809844feeee1c9bccf4bf1b27
+Description: Boost detail module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-static-assert
+Version: 1.75.0
+Depends: boost-config, boost-detail, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 63b9f69387d351b8b35828f80f4e3453be3e11d8
+Description: Boost static_assert module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-core
+Version: 1.75.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e00352e8c8ec1e06b409798f0705f1e1f06c6560
+Description: Boost core module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-integer
+Version: 1.75.0
+Depends: boost-assert, boost-compatibility, boost-config, boost-core, boost-detail, boost-static-assert, boost-throw-exception, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f8d427a4f0f633792ed136233eddbfdc2f4d639b
+Description: Boost integer module
+Type: Port
+Status: purge ok not-installed
+
+Package: boost-system
+Version: 1.75.0
+Port-Version: 1
+Depends: boost-build, boost-config, boost-integer, boost-modular-build-helper, boost-vcpkg-helpers, boost-winapi
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b32e1026832c6e939896e4675b7b144e06d43378
+Description: Boost system module
+Type: Port
+Status: purge ok not-installed
+
+Package: vcpkg-cmake-config
+Version: 2021-05-22
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b50e4e5842d510da2661976301b0cf63178cf96d
+Type: Port
+Status: purge ok not-installed
+
+Package: vcpkg-cmake
+Version: 2021-02-28
+Port-Version: 2
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f0417292e76e7ca234c0a4641f8fc4eefd74540d
+Type: Port
+Status: purge ok not-installed
+
+Package: fmt
+Version: 6.0.0
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5506978c4d5667ddadd3725ec48bb1dab356e556
+Description: Formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
+Type: Port
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.9.1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c4921ea63c1d7dd6310ade91584c5d6b6fa5ccd3
+Description: JSON for Modern C++
+Type: Port
+Status: install ok installed
+
+Package: xtl
+Version: 0.6.21
+Depends: nlohmann-json
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 253cf80c7f3459e1ffc60e8fc6bbc5ad335c1f8a
+Description: The x template library.
+Type: Port
+Status: install ok installed
+
+Package: xtensor
+Version: 0.21.9
+Depends: nlohmann-json, xtl
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c8393dc61213dedb882c47aa75decce373aadc11
+Description: C++ tensors with broadcasting and lazy computing
+Type: Port
+Status: install ok installed
+

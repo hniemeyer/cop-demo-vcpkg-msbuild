@@ -1,0 +1,8 @@
+prefix=C:/Users/hniemeyer/source/vcpkg/packages/xtl_x64-windows
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: xtl
+Description: Basic tools (containers, algorithms) used by other quantstack packages.
+Version: 0.6.21
+Cflags: -I${includedir}
